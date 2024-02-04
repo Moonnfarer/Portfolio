@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfoliosida</title> 
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3e1f274828.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
     <div class="container">
         <nav>
             <img src="images/logo.png" class="logo">
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
             <p>Bachelor student</p>
@@ -35,31 +38,31 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>My name is Måns Dahlvig. I am 23 years old, and currently in my 4th semester 
+                <p>My name is Måns Dahlvig. I am 23 years old, currently in my 4th semester 
                 studying Information Systems: The Digitalisation of Society.</p>
 
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('experience')">Work Experience</p>
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul> 
-                        <li><span>Dart</span><br>Throwing 180s</li>
-                        <li><span>Espresso Martini</span><br>mixing, shaking, pouring and drinking</li>
+                        <li><span>Dart</span>  <i class="fa-solid fa-bullseye"></i><br>Throwing 180s</li>
+                        <li><span>Espresso Martini </span> <i class="fa-solid fa-martini-glass"></i><br>mixing, shaking, pouring and drinking</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span>hej</span><br>hej</li>
-                        <li><span>hej</span><br>hej</li>
+                        <li><span>Resurs Bank, Helsingborg</span><br>Customer service  <i class="fa-solid fa-headset"></i><br>2019-2021</li>
+                        <li><span>Dansk Støbeasfalt, Albertslund</span><br>Asphalt paver    <i class="fa-solid fa-person-digging"></i><br>summer of 2017 & 2018</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
                     <ul>
-                        <li><span>University of Gothenburg</span><br>Information Systems: The Digitalisation of Society<br>2022-2025</li>
-                        <li><span>Swedish armed forces</span><br>Command soldier, Södra Skånska Regementet, P7<br>2021-2022</li>
-                        <li><span>Thoren Business School</span><br>Economics education in high school<br>2016-2019</li>
+                        <li><span>University of Gothenburg</span>  <i class="fa-solid fa-building-columns"></i><br>Information Systems: The Digitalisation of Society<br>2022-2025</li>
+                        <li><span>Swedish armed forces</span>  <i class="fa-solid fa-person-military-rifle"></i><br>Command soldier, Södra Skånska Regementet, P7<br>2021-2022</li>
+                        <li><span>Thoren Business School</span>  <i class="fa-solid fa-graduation-cap"></i><br>Economics education in high school<br>2016-2019</li>
                     </ul>
                 </div>
             </div>
@@ -69,26 +72,81 @@
 <!-- -------services--------- -->
 <div id="services">
     <div class="container">
-        <h1 class="sub-title">My Services</h1>
+        <h1 class="sub-title">Projects</h1>
         <div class="services-list">
             <div>
+                <i class="fa-solid fa-code"></i>
                 <h2>Första</h2>
                 <p>***</p>
-                <a href="#">learn more</a>
+                <a href="#">Learn more</a>
             </div>
             <div>
+                <i class="fa-solid fa-hippo"></i>
                 <h2>Andra</h2>
                 <p>***</p>
-                <a href="#">learn more</a>
+                <a href="#">Learn more</a>
             </div>
             <div>
+                <i class="fa-solid fa-rocket"></i>
                 <h2>Tredje</h2>
                 <p>***</p>
-                <a href="#">learn more</a>
+                <a href="#">Learn more</a>
             </div>
 
         </div>
     </div>
+</div>
+<!-- ---------portfolio----------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Things i did</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/speletbild.png">
+                <div class="layer">
+                    <h3>A single player shooting game we made as a group project</h3>
+                    <a> <i class="fa-solid fa-gamepad"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/fox.jpeg">
+                <div class="layer">
+                    <h3>painted this cute fox</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/margot.png"><div class="layer">
+                    <h3>did not do her</h3>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -----------contact------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> dahlvig.mans@gmail.com</p>
+                <p><i class="fa-solid fa-mobile-screen-button"></i>  072-719 00 27</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/mans.dahlvig.3/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form> 
+                    <input type="text" name="Name" placeholder="Your Name" required>    
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+
+            </div>
+        </div>
 </div>
 
 <script>
@@ -106,6 +164,19 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
+</script>
+
+<script>
+    
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemenu.style.right = "0"
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200"
+    }
+
 </script>
 
 </body>
