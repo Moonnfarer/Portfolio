@@ -330,7 +330,7 @@ nav .fa-solid{
         font-size: 25px;
     }
     nav ul{
-        background: rgb(210, 130, 50);
+        background: rgba(210, 130, 50, 0.224);
         position: fixed;
         top: 0;
         right: -200px;
@@ -344,10 +344,11 @@ nav .fa-solid{
         display: block;
         margin: 25px;
     }
+  
     nav .fa-solid{
         position: absolute;
         top: 25px;
-        left: 25px;
+        right: 25px;
         cursor: pointer;
     }
     .sub-title{
